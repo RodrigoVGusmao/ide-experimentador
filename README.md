@@ -1,24 +1,44 @@
-# README
+# Sprint 1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Equipe
 
-Things you may want to cover:
+- Amanda
+- Giovanni
+- Leonardo
+- Maria Claudia 17/0109968
+- Rodrigo
 
-* Ruby version
+Scrum Master:
 
-* System dependencies
+Product Owner: Caio Otavio Peluti Alencar (alencar.caio@aluno.unb.br)
 
-* Configuration
+## Funcionalidades
 
-* Database creation
+1. Renderização gráfica de cards dos testes de um experimento com os seguintes campos e botões:
 
-* Database initialization
+   - nome
+   - coordenadas
+   - carga da bateria
+   - status
+   - botão para executar
+   - botão para selecionar
+   - botão para abrir modal de 'mais detalhes'
+   - quantidade de execuções de um teste
 
-* How to run the test suite
+   > Regras de negócio:
 
-* Services (job queues, cache servers, search engines, etc.)
+   > Pontos:
 
-* Deployment instructions
+   > Responsável(eis):
 
-* ...
+2. Renderização gráfica de modal de 'mais detalhes' com quatro páginas vazias e um botão para fechar
+
+   > Regras de negócio:
+
+   > Pontos:
+
+   > Responsável(eis):
+
+## Política de branching
+
+(Sugestão) Branch por funcionalidade, bug, etc.
