@@ -14,6 +14,8 @@ Product Owner: Caio Otavio Peluti Alencar (alencar.caio@aluno.unb.br)
 
 ## Funcionalidades
 
+<!-- TODO: criar as issues e referenciar aqui -->
+
 1. Renderização gráfica de cards dos testes de um experimento com os seguintes campos e botões:
 
    - nome
