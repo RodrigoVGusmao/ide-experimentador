@@ -27,7 +27,7 @@ Product Owner: Caio Otavio Peluti Alencar (alencar.caio@aluno.unb.br)
 
    > Regras de negócio:
 
-   > Pontos:
+   > Pontos: (sugestão) decidir a partir de quantas issues vão sugir para essa tarefa
 
    > Responsável(eis):
 
@@ -35,7 +35,7 @@ Product Owner: Caio Otavio Peluti Alencar (alencar.caio@aluno.unb.br)
 
    > Regras de negócio:
 
-   > Pontos:
+   > Pontos: (sugestão) decidir a partir de quantas issues vão sugir para essa tarefa
 
    > Responsável(eis):
 
