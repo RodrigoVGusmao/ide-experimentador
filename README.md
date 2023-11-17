@@ -18,8 +18,6 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 
 ## Funcionalidades
 
-<!-- TODO: criar as issues em relação as funcionalidades e referenciar aqui -->
-
 1. Renderização gráfica de cards dos testes de um experimento com os campos e botões:
 
    - nome do experimento
@@ -36,9 +34,14 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
    > - O usuário pode executar o experimento com um todo incluindo apenas os testes selecionados
    > - O usuário pode parar a execução de um teste que está executando
 
-   > Pontos: (sugestão) decidir a partir de quantas issues vão sugir para essa tarefa
+   > Pontos: 4
+   >
+   > - Um ponto por conta de pegar os dados do teste do backend
+   > - Um ponto por conta de criar o card sem troca dos estados dos ícones
+   > - Um ponto por conta de trocar o estado dos icones e tags
+   > - Um ponto para criar lista de skill retrátil e dropdown para mais opções
 
-   > Responsável(eis): (sugestão) Amanda, Maria Claudia, Leonardo
+   > Responsável(eis): Amanda, Maria Claudia, Leonardo
 
 2. Renderização gráfica de modal de 'mais detalhes' com quatro páginas vazias e um botão para fechar
 
@@ -47,10 +50,13 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
    > - O usuário deve conseguir acessar as outras páginas
    > - O usuário deve conseguir retornar para a página do experimento em que estava antes de abrir o modal
 
-   > Pontos: (sugestão) decidir a partir de quantas issues vão sugir para essa tarefa
+   > Pontos: 2
+   >
+   > - Um ponto para criar a estrutura do modal e que ele abre e fecha
+   > - Um ponto para criar as paginas dentro do modal
 
-   > Responsável(eis): (sugestão) Giovanni, Rodrigo
+   > Responsável(eis): Giovanni, Rodrigo
 
 ## Política de branching
 
-(Sugestão) Branch por funcionalidade, bug, etc.
+Branch por issue.
