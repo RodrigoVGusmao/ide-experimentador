@@ -10,7 +10,7 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 - Giovanni Minari 20/2014280
 - Leonardo
 - Maria Claudia 17/0109968
-- Rodrigo
+- Rodrigo Vieira 23/2036466
 
 **Scrum Master:** Giovanni Minari
 
