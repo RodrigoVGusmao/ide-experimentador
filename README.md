@@ -12,7 +12,7 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 - Maria Claudia 17/0109968
 - Rodrigo
 
-**Scrum Master:** Maria Claudia
+**Scrum Master:** Giovanni Minari
 
 **Product Owner:** Caio Otavio Peluti Alencar (alencar.caio@aluno.unb.br)
 
