@@ -87,13 +87,13 @@ Cenário: Visualizar modal
   E o botão 'bateria' é pressionado
   Então um destaque no ícone de 'bateria' deveria aparecer
   E a página vazia com futuros detalhes da 'bateria' deveria aparecer
-  Quando eu no botão de 'coordenadas'
+  Quando eu pressiono no botão de 'coordenadas'
   Então um destaque no ícone de 'coordenadas' deveria aparecer
   E a página vazia com futuros detalhes de 'coordenadas' deveria aparecer
-  Quando eu no botão de 'velocidade'
+  Quando eu pressiono no botão de 'velocidade'
   Então um destaque no ícone de 'velocidade' deveria aparecer
   E a página vazia com futuros detalhes de 'velocidade' deveria aparecer
-  Quando eu no botão de 'Runs'
+  Quando eu pressiono no botão de 'Runs'
   Então um destaque no ícone de 'Runs' deveria aparecer
   E a página vazia com futuros detalhes de 'Runs' deveria aparecer
 
