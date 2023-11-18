@@ -6,9 +6,9 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 
 ## Equipe responsável
 
-- Amanda
+- Amanda Leite 18/0115481
 - Giovanni Minari 20/2014280
-- Leonardo
+- Leonardo Ramos 21/1010360
 - Maria Claudia 17/0109968
 - Rodrigo Vieira 23/2036466
 
