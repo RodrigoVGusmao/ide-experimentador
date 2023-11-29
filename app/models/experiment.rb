@@ -1,14 +1,14 @@
 class trial_result
-    attr_reader :strStatus;
-    attr_reader :fpPositionX;
-    attr_reader :fpPositionY;
-    attr_reader :fpBattery;
+    attr_reader :status;
+    attr_reader :position_x;
+    attr_reader :position_y;
+    attr_reader :battery;
 
-    def getData()
-        @fpPositionX = TrialExecution.log.scan("'x':\s*(.),").last;
-        @fpPositionY = TrialExecution.log.scan("'y':\s*(.),").last;
-        @fpBattery = TrialExecution.log.scan("'bettery-level':\s*'(.)',").last;
-        @strStatus = TrialExecution.status;
+    def get_data(data) #TrialExecution object
+        @position_x = data.log.scan("'x':\s*(.),").last;
+        @position_y = data.log.scan("'y':\s*(.),").last;
+        @battery = data.log.scan("'bettery-level':\s*'(.)',").last;
+        @status = data.status;
     end
 end
 
