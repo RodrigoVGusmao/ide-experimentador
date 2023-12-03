@@ -60,3 +60,19 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 ## Política de branching
 
 Branch por issue.
+
+## Como executar o projeto
+
+Depois de instalar as depências com
+
+`bundle install `
+
+e
+
+`yarn install `
+
+O projeto pode ser executado localmente com
+
+`bin/dev`
+
+Para acessar a página de demonstração, a rota `hello/world` deve ser acessada
