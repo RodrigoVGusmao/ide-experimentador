@@ -1,25 +1,11 @@
 import React, { useState } from "react";
 import "../../../../assets/stylesheets/modal.css";
 
-export default function Modal() {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  const handleButtonClick = (buttonName) => {
-    openModal();
-  };
+export default function Modal({ isModalOpen, closeModal }) {
+  console.log(isModalOpen);
 
   return (
     <div>
-      <button onClick={() => handleButtonClick("battery")}>modal</button>
-
       {isModalOpen && (
         <div onClick={closeModal} className="modal-overlay">
           <div onClick={(e) => e.stopPropagation()} className="modal">
