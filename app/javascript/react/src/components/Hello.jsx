@@ -1,24 +1,25 @@
-import React, {useEffect, useState} from 'react'
-                                                        
-const Hello = (props) => {                                   
-  let [count, setCount] = useState(0)
-  let [req, setReq] = useState("") 
-  useEffect(() => {
-    fetch("/hello/worldGet").then(async res=>{
-      const parse = await res.text()
-      console.log(parse)
-      return parse
-    }).then(res=>setReq(res))
-  }, [])
+import React, { useEffect, useState } from "react";
+import "../../../../assets/stylesheets/modal.css";
+import Modal from "./Modal";
+
+const Hello = (props) => {
+  // let [count, setCount] = useState(0);
+  // let [req, setReq] = useState("");
+  // useEffect(() => {
+  //   fetch("/hello/worldGet")
+  //     .then(async (res) => {
+  //       const parse = await res.text();
+  //       console.log(parse);
+  //       return parse;
+  //     })
+  //     .then((res) => setReq(res));
+  // }, []);
+
   return (
     <div>
-      <h1>Counter prop:{props.name}: {count}</h1>
-      <h2>{req}</h2>
-      <button onClick={()=>{
-        setCount(count+1)
-      }}> Add </button>
+      <Modal />
     </div>
-  )                   
-}                                                       
-                                        
-export default Hello
+  );
+};
+
+export default Hello;
