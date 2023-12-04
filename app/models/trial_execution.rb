@@ -5,10 +5,21 @@ class TrialResult
     attr_reader :battery;
 
     def initialize(data) #TrialExecution object
-        @position_x = data.log.match(".*'x':\s*(.+?)(,|})") != nil ? data.log.match(".*'x':\s*(.+?)(,|})")[1] : "-";
-        @position_y = data.log.match(".*'y':\s*(.+?)(,|})") != nil ? data.log.match(".*'y':\s*(.+?)(,|})")[1] : "-";
-        @battery = data.log.match(".*'battery-level':\s*'(.+?)'(,|})") != nil ? data.log.match(".*'battery-level':\s*'(.+?)'(,|})")[1] : "-";
+        @position_x = "-";
+        @position_y = "-";
+        @battery = "-";
         @status = (data.status == nil or data.status.match("^\s*$")) ? "N/A" : data.status;
+        if data.log != nil
+          if data.log.match(".*'x':\s*(.+?)(,|})") != nil
+            @position_x = data.log.match(".*'x':\s*(.+?)(,|})")[1];
+          end
+          if data.log.match(".*'y':\s*(.+?)(,|})") != nil
+            @position_y = data.log.match(".*'y':\s*(.+?)(,|})")[1];
+          end
+          if data.log.match(".*'battery-level':\s*'(.+?)'(,|})") != nil
+            @battery = data.log.match(".*'battery-level':\s*'(.+?)'(,|})")[1];
+          end
+        end
     end
 end
 
