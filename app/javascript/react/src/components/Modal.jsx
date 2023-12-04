@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../../../assets/stylesheets/modal.css";
 
 export default function Modal({ isModalOpen, closeModal }) {
-  console.log(isModalOpen);
-
   return (
     <div>
       {isModalOpen && (
