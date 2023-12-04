@@ -7,36 +7,3 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
-Experiment.destroy_all
-
-xp1 = Experiment.create!(
-    {
-        "name": "exp01",
-        "disabled": false
-    }
-)
-
-p "Created #{Experiment.count} experiments"
-
-Trial.destroy_all
-
-trial1 = Trial.create!(
-    {   
-        "name": "nome",
-        "disabled": false,
-        "deleted": false,
-        "runs": 0,
-        "experiment": xp1
-    }
-)
-p "Created #{Trial.count} trials"
-
-TrialExecution.destroy_all
-
-TrialExecution.create!({
-    "status": "success",
-    "log": "log text",
-    "trial": trial1
-})
-p "Created #{TrialExecution.count} trialExecution"
