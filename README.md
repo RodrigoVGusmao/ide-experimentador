@@ -60,3 +60,7 @@ O design dos componentes a serem desenvolvidos em código pode ser acessado pelo
 ## Política de branching
 
 Branch por issue.
+
+## Seed
+
+`rails db:seed`
