@@ -1,42 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 .card {
-  width: 452px;
-  height: 136px;
+  width: 452 px;
+  height: 136 px;
 
   border-radius: 20px;
-  border-style: 1px solid #f3f3f3;
+  border-style: 1 px solid #f3f3f3;
   background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 
-  margin-bottom: 40px;
+  margin-bottom: 20 px;
+
+  font-family: "Ubuntu", sans-serif;
 }
 
 .card-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: left !important;
+  padding-top: 18px;
+  gap: 10px;
+}
 
-  gap: 5px;
+.test-name {
+  width: 72px;
+  height: 25px;
+  top: 18px;
+  left: 30px;
+
+  position: absolute;
+
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0em;
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  color: #000000;
+}
+
+.toggle {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  left: 332px;
+  top: 18px;
+}
+
+.tag {
+  position: absolute;
+  left: 3.45%;
+  right: 0.34%;
+  top: 0.69%;
+  bottom: 7.59%;
 }
 
 .card-content {
-  display: flex;
+  height: 100px;
+  display: inline-block;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
+  justify-content: baseline;
+  padding-top: 10px;
   gap: 2px;
+}
+
+.skills {
+  position: relative;
+  padding: 10px;
+}
+
+.skill-text {
+  font-size: 14px;
+  padding: 8px;
 }
 
 .card-bottom {
   display: flex;
+  align-self: last baseline;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-
-  gap: 5px;
+  align-items: right;
+  gap: 15px;
 }

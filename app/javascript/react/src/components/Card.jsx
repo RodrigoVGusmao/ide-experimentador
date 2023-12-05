@@ -4,25 +4,54 @@ import "../../../../assets/stylesheets/card.css";
 
 export default function Card() {
   return (
-    <div>
+    <div className="fundo">
       <div className="card">
         {/* <Modal /> */}
         <div className="card-header">
-          <p>Nome do teste</p>
-          <p>Tags</p>
-          <p>ativar</p>
-          <p>executar</p>
-          <p>mais opções</p>
+          <div className="test-name">
+            <text>Teste 1</text>
+          </div>
+
+          <div>
+            <img src="card-icons/tag1.svg" alt="Tag 1" />
+          </div>
+
+          <div>
+            <img src="card-icons/tag2.svg" alt="Tag2" />
+          </div>
+
+          <div>
+            <img src="card-icons/toggle.svg" alt="Ativar" />
+          </div>
+
+          <div>
+            <img src="card-icons/play.svg" alt="Executar" />
+          </div>
+
+          <div>
+            <img src="card-icons/more-horizontal.svg" alt="Mais" />
+          </div>
         </div>
 
         <div className="card-content">
-          <p>Location</p>
-          <p>Battery</p>
-          <p>skills</p>
+          <div className="skills">
+            <img src="card-icons/map-pin.svg" />
+            <text className="skill-text">X:0</text>
+            <text className="skill-text">Y:0</text>
+            <text className="skill-text">Z:0</text>
+          </div>
+
+          <div className="skills">
+            <img src="card-icons/battery-charging.svg" />
+            <text className="skill-text">0%</text>
+          </div>
         </div>
 
         <div className="card-bottom">
-          <p>Runs</p>
+          <text>Runs: 0</text>
+          <div>
+            <img src="card-icons/ellipse-green.svg" />
+          </div>
         </div>
       </div>
     </div>
