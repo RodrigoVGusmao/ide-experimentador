@@ -1,92 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 .card {
-  width: 452 px;
-  height: 136 px;
-
+  width: 452px;
+  height: 136px;
+  font-family: "Ubuntu", sans-serif;
   border-radius: 20px;
   border-style: 1 px solid #f3f3f3;
   background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   margin-bottom: 20 px;
-
-  font-family: "Ubuntu", sans-serif;
 }
 
 .card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: left !important;
-  padding-top: 18px;
   gap: 10px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  font-size: 10px;
 }
 
-.test-name {
+.test-title {
   width: 72px;
-  height: 25px;
   top: 18px;
   left: 30px;
-
   position: absolute;
-
-  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 400px;
   font-size: 22px;
   line-height: 25px;
   letter-spacing: 0em;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
-
   color: #000000;
 }
 
-.toggle {
+.tags {
+  left: 117px;
+  top: 25px;
   position: absolute;
-  width: 29px;
-  height: 29px;
-  left: 332px;
-  top: 18px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: start;
 }
 
 .tag {
+  width: 56px;
+}
+
+.options {
   position: absolute;
-  left: 3.45%;
-  right: 0.34%;
-  top: 0.69%;
-  bottom: 7.59%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-self: center;
+  width: 83px;
+  height: 29px;
+  left: 358px;
+  top: 25px;
 }
 
 .card-content {
-  height: 100px;
   display: inline-block;
-  flex-direction: row;
-  justify-content: baseline;
-  padding-top: 10px;
-  gap: 2px;
+  padding-top: 25px;
 }
 
 .skills {
-  position: relative;
-  padding: 10px;
+  padding: 5px 5px 5px 42px;
 }
 
 .skill-text {
   font-size: 14px;
-  padding: 8px;
+  padding: 10px;
 }
 
 .card-bottom {
+  padding-top: 2px;
   display: flex;
-  align-self: last baseline;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: right;
-  gap: 15px;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.runs {
+  padding-left: 348px;
+}
+
+.fundo {
+  background-color: #000000;
+  height: 300px;
 }

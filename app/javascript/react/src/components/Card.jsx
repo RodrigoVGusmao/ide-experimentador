@@ -8,28 +8,32 @@ export default function Card() {
       <div className="card">
         {/* <Modal /> */}
         <div className="card-header">
-          <div className="test-name">
+          <div className="test-title">
             <text>Teste 1</text>
           </div>
 
-          <div>
-            <img src="card-icons/tag1.svg" alt="Tag 1" />
+          <div className="tags">
+            <div className="tag">
+              <img src="card-icons/tag1.svg" alt="Tag 1" />
+            </div>
+
+            <div className="tag">
+              <img src="card-icons/tag2.svg" alt="Tag2" />
+            </div>
           </div>
 
-          <div>
-            <img src="card-icons/tag2.svg" alt="Tag2" />
-          </div>
+          <div className="options">
+            <div>
+              <img src="card-icons/toggle.svg" alt="Ativar" />
+            </div>
 
-          <div>
-            <img src="card-icons/toggle.svg" alt="Ativar" />
-          </div>
+            <div>
+              <img src="card-icons/play.svg" alt="Executar" />
+            </div>
 
-          <div>
-            <img src="card-icons/play.svg" alt="Executar" />
-          </div>
-
-          <div>
-            <img src="card-icons/more-horizontal.svg" alt="Mais" />
+            <div>
+              <img src="card-icons/more-horizontal.svg" alt="Mais" />
+            </div>
           </div>
         </div>
 
@@ -48,7 +52,7 @@ export default function Card() {
         </div>
 
         <div className="card-bottom">
-          <text>Runs: 0</text>
+          <text className="runs">Runs: 0</text>
           <div>
             <img src="card-icons/ellipse-green.svg" />
           </div>
