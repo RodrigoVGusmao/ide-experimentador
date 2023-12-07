@@ -5,30 +5,27 @@
   height: 136px;
   font-family: "Ubuntu", sans-serif;
   border-radius: 20px;
-  border-style: 1 px solid #f3f3f3;
+  border-style: 1px solid #f3f3f3;
   background-color: #ffffff;
 
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 20 px;
+  margin-bottom: 20px;
 }
 
 .card-header {
   gap: 10px;
   padding-top: 18px;
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   font-size: 10px;
 }
 
 .test-title {
   width: 72px;
-  top: 18px;
-  left: 30px;
-  position: absolute;
   font-style: normal;
   font-weight: 400px;
   font-size: 22px;
@@ -38,15 +35,16 @@
   align-items: flex-start;
   text-align: left;
   color: #000000;
+
+  margin-left: 30px;
+  margin-right: 15px;
 }
 
 .tags {
-  left: 117px;
-  top: 25px;
-  position: absolute;
   display: inline-flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
+  gap: 9px;
 }
 
 .tag {
@@ -54,43 +52,51 @@
 }
 
 .options {
-  position: absolute;
   display: inline-flex;
   flex-direction: row;
-  justify-self: center;
+  justify-self: flex-start;
+  align-items: center;
   width: 83px;
   height: 29px;
-  left: 358px;
-  top: 25px;
+
+  margin-left: 15%;
+  gap: 10px;
 }
 
 .card-content {
-  display: inline-block;
-  padding-top: 25px;
+  width: 50%;
+  margin-top: 9px;
+  margin-left: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .skills {
-  padding: 5px 5px 5px 42px;
+  text-justify: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill-text {
   font-size: 14px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .card-bottom {
-  padding-top: 2px;
+  width: 50%;
+
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: flex-end;
+  margin-right: 5%;
   font-size: 14px;
 }
 
 .runs {
-  padding-left: 348px;
-}
-
-.fundo {
-  background-color: #000000;
-  height: 300px;
+  margin-right: 12px;
 }
