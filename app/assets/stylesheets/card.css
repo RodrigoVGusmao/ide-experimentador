@@ -63,6 +63,35 @@
   gap: 10px;
 }
 
+.toggle-switch {
+  cursor: pointer;
+}
+
+.play-button {
+  cursor: pointer;
+  position: relative;
+  bottom: 4px;
+}
+
+/* Botão de ativar todos os testes de cards que estão ativos (não achei esse botão) */
+.batch-play-button {
+  cursor: pointer;
+  position: relative;
+  bottom: 4px;
+}
+
+.play-activated {
+    position: relative;
+    left: 2px;
+    bottom: 8px;
+}
+
+.batch-play-activated {
+    position: relative;
+    left: 2px;
+    bottom: 4px;
+}
+
 .card-content {
   width: 50%;
   margin-top: 9px;
