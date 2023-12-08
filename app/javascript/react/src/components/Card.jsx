@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "./Modal";
 import "../../../../assets/stylesheets/card.css";
+import "./ToggleCard.js"
 
 export default function Card() {
   return (
@@ -23,15 +24,15 @@ export default function Card() {
 
         <div className="options">
           <div>
-            <img src="/card-icons/toggle-activated.svg" alt="Ativar" />
+            <img src="/card-icons/toggle-right.svg" alt="Ativar" class="toggle-switch" />
           </div>
 
           <div>
-            <img src="/card-icons/play.svg" alt="Executar" />
+            <img src="/card-icons/play-unactivated.svg" alt="Executar" class="play-button" />
           </div>
 
           <div>
-            <img src="/card-icons/more-horizontal.svg" alt="Mais" />
+            <img src="/card-icons/more-horizontal.svg" alt="Mais" class="drop-down" />
           </div>
         </div>
       </div>
