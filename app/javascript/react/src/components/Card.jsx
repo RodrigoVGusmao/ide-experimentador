@@ -1,16 +1,14 @@
 import React from "react";
 import Modal from "./Modal";
 import "../../../../assets/stylesheets/card.css";
-import "./ToggleCard.js"
+import "./ToggleCard.js";
 
 export default function Card() {
   return (
     <div className="card">
       {/* <Modal /> */}
       <div className="card-header">
-        <div className="test-title">
-          <text>Teste 1</text>
-        </div>
+        <div className="test-title">Teste 1</div>
 
         <div className="tags">
           <div className="tag">
@@ -24,15 +22,27 @@ export default function Card() {
 
         <div className="options">
           <div>
-            <img src="/card-icons/toggle-right.svg" alt="Ativar" class="toggle-switch" />
+            <img
+              src="/card-icons/toggle-right.svg"
+              alt="Ativar"
+              className="toggle-switch"
+            />
           </div>
 
           <div>
-            <img src="/card-icons/play-unactivated.svg" alt="Executar" class="play-button" />
+            <img
+              src="/card-icons/play-unactivated.svg"
+              alt="Executar"
+              className="play-button"
+            />
           </div>
 
           <div>
-            <img src="/card-icons/more-horizontal.svg" alt="Mais" class="drop-down" />
+            <img
+              src="/card-icons/more-horizontal.svg"
+              alt="Mais"
+              className="drop-down"
+            />
           </div>
         </div>
       </div>
@@ -40,19 +50,17 @@ export default function Card() {
       <div className="card-content">
         <div className="skills">
           <img src="/card-icons/map-pin.svg" />
-          <text className="skill-text">X:0</text>
-          <text className="skill-text">Y:0</text>
-          <text className="skill-text">Z:0</text>
+          <p className="skill-text">X:0 Y:0 Z:0</p>
         </div>
 
         <div className="skills">
           <img src="/card-icons/battery-charging.svg" />
-          <text className="skill-text">0%</text>
+          <p className="skill-text">0%</p>
         </div>
       </div>
 
       <div className="card-bottom">
-        <text className="runs">Runs: 0</text>
+        <p className="runs">Runs: 0</p>
         <div>
           <img src="/card-icons/ellipse-green.svg" />
         </div>

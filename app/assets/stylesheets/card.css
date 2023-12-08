@@ -81,15 +81,15 @@
 }
 
 .play-activated {
-    position: relative;
-    left: 2px;
-    bottom: 8px;
+  position: relative;
+  left: 2px;
+  bottom: 8px;
 }
 
 .batch-play-activated {
-    position: relative;
-    left: 2px;
-    bottom: 4px;
+  position: relative;
+  left: 2px;
+  bottom: 4px;
 }
 
 .card-content {
@@ -112,6 +112,7 @@
 .skill-text {
   font-size: 14px;
   padding: 5px;
+  margin: 0;
 }
 
 .card-bottom {
@@ -128,4 +129,6 @@
 
 .runs {
   margin-right: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
