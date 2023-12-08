@@ -39,4 +39,27 @@ window.onload = function () {
       }
     });
   }
+
+  // Muda icone da lista de experimentos
+  var playButtonXpPage = document.querySelector(".play-button-xp-page");
+
+  if (playButtonXpPage) {
+    playButtonXpPage.src = "/card-icons/play.svg";
+    playButtonXpPage.addEventListener("click", function () {
+      // Atribuir classe ativada para o botão play (o teste do card tá rodando)
+      playButtonXpPage.classList.toggle("play-activated-xp-page");
+      // Checar se o botão está no estado ativado
+      var isPlayActivated = playButtonXpPage.classList.contains(
+        "play-activated-xp-page"
+      );
+      // Condição para ver se o botão tá ativado
+      if (isPlayActivated) {
+        // Mudar a imagem base do play para running
+        playButtonXpPage.src = "/card-icons/running-stop.svg";
+      } else {
+        // Mudar a imagem base do running para play
+        playButtonXpPage.src = "/card-icons/play.svg";
+      }
+    });
+  }
 };
