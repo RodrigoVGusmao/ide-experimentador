@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../../../assets/stylesheets/modal.css";
-import Modal from "./Modal";
+import ExperimentPage from "./ExperimentPage";
 
 const Hello = (props) => {
   // let [count, setCount] = useState(0);
@@ -27,8 +26,7 @@ const Hello = (props) => {
 
   return (
     <div>
-      <button onClick={() => openModal()}>Abrir modal</button>
-      <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
+      <ExperimentPage />
     </div>
   );
 };
