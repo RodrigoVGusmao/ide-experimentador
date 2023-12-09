@@ -46,7 +46,7 @@ window.onload = function () {
   if (playButtonXpPage) {
     playButtonXpPage.src = "/card-icons/play.svg";
     playButtonXpPage.addEventListener("click", function () {
-      // Atribuir classe ativada para o botão play (o teste do card tá rodando)
+      // Atribuir classe ativada para o botão play (o batch teste dos cards tá rodando)
       playButtonXpPage.classList.toggle("play-activated-xp-page");
       // Checar se o botão está no estado ativado
       var isPlayXpActivated = playButtonXpPage.classList.contains(
@@ -56,9 +56,20 @@ window.onload = function () {
       if (isPlayXpActivated) {
         // Mudar a imagem base do play para running
         playButtonXpPage.src = "/card-icons/running-stop.svg";
+
+        // Condição para rodar os cards ativos
+        if (document.querySelector(".toggle-switch").classList.contains("card-activated")) {
+          // Roda os testes dos cards que estão ativos
+          document.querySelector(".play-button").src = "/card-icons/running-stop.svg";
+
+          // Função para rodar testes...
+        }
       } else {
         // Mudar a imagem base do running para play
         playButtonXpPage.src = "/card-icons/play.svg";
+        document.querySelector(".play-button").src = "/card-icons/play.svg";
+
+        // Função para interromper testes...
       }
     });
   }
