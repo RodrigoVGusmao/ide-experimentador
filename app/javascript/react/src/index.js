@@ -1,4 +1,4 @@
 import { define } from "remount";
-import Hello from "./components/Hello";
+import Home from "./components/Home";
 
-define({ "experiments-component": Hello });
+define({ "experiments-component": Home });

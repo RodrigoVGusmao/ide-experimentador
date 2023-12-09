@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ExperimentPage from "./ExperimentPage";
 
-const Hello = (props) => {
+const Home = (props) => {
   // let [count, setCount] = useState(0);
   // let [req, setReq] = useState("");
   // useEffect(() => {
