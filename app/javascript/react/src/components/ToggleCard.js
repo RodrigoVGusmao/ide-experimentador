@@ -49,11 +49,11 @@ window.onload = function () {
       // Atribuir classe ativada para o botão play (o teste do card tá rodando)
       playButtonXpPage.classList.toggle("play-activated-xp-page");
       // Checar se o botão está no estado ativado
-      var isPlayActivated = playButtonXpPage.classList.contains(
+      var isPlayXpActivated = playButtonXpPage.classList.contains(
         "play-activated-xp-page"
       );
       // Condição para ver se o botão tá ativado
-      if (isPlayActivated) {
+      if (isPlayXpActivated) {
         // Mudar a imagem base do play para running
         playButtonXpPage.src = "/card-icons/running-stop.svg";
       } else {
