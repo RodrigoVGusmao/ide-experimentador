@@ -1,12 +1,12 @@
 import React from "react";
 import ExperimentPage from "./ExperimentPage";
 
-const Home = (props) => {
+function Home() {
   return (
     <div>
       <ExperimentPage />
     </div>
   );
-};
+}
 
-export default Hello;
+export default Home;
