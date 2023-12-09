@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 import "../../../../assets/stylesheets/card.css";
 
-export default function Card() {
+export default function Card({ name, disabled, deleted, runs, trialId }) {
+  const [log, setLog] = useState({});
+
+  useEffect(() => {
+    const path = "/api/trial/" + trialId;
+    fetch(path).then(async (res) => {
+      const parse = await res.json();
+      const logJSON = JSON.parse(parse.log);
+
+      console.log("card", parse);
+      console.log("log", logJSON);
+      const x = logJSON.x;
+      const y = logJSON.y;
+      const z = logJSON.z;
+      const battery = logJSON.battery;
+      setLog({ x, y, z, battery });
+    });
+  }, []);
+
   return (
     <div className="card">
       {/* <Modal /> */}
       <div className="card-header">
         <div className="test-title">
-          <text>Teste 1</text>
+          <text>{name}</text>
         </div>
 
         <div className="tags">
@@ -39,19 +57,19 @@ export default function Card() {
       <div className="card-content">
         <div className="skills">
           <img src="/card-icons/map-pin.svg" />
-          <text className="skill-text">X:0</text>
-          <text className="skill-text">Y:0</text>
-          <text className="skill-text">Z:0</text>
+          <text className="skill-text">X:{log.x}</text>
+          <text className="skill-text">Y:{log.y}</text>
+          <text className="skill-text">Z:{log.z}</text>
         </div>
 
         <div className="skills">
           <img src="/card-icons/battery-charging.svg" />
-          <text className="skill-text">0%</text>
+          <text className="skill-text">{log.battery}</text>
         </div>
       </div>
 
       <div className="card-bottom">
-        <text className="runs">Runs: 0</text>
+        <text className="runs">Runs: {runs}</text>
         <div>
           <img src="/card-icons/ellipse-green.svg" />
         </div>

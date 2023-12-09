@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'api/trial/:id', to: "trial#showTrialExecution"
 
   get 'experiments/', to: 'experiments#index'
+  get 'api/experiments/', to: 'experiments#showAll'
   get 'api/experiments/:id', to: 'experiments#show'
   get 'api/experiments/:id/trial', to: 'experiments#listAllTrials'
  
