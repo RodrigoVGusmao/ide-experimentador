@@ -1,5 +1,8 @@
 class TrialController < ApplicationController
-  def show
-    @data = TrialResult.new(params[:id]);
+  def showTrialExecution
+    render json: TrialExecution.find(params[:id])
+    # @data = TrialExecution.new(params[:id]);
   end
+  
+
 end
