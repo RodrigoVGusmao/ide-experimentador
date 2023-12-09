@@ -15,9 +15,20 @@ const Hello = (props) => {
   //     .then((res) => setReq(res));
   // }, []);
 
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  function openModal() {
+    setModalOpen(true);
+  }
+
+  function closeModal() {
+    setModalOpen(false);
+  }
+
   return (
     <div>
-      <Modal />
+      <button onClick={() => openModal()}>Abrir modal</button>
+      <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
     </div>
   );
 };
