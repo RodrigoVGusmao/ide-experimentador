@@ -11,6 +11,18 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.play-button-xp-page {
+  cursor: pointer;
+}
+
+.play-activated-xp-page {
+  position: relative;
+}
+
+.batch-play-activated-xp-page {
+  position: relative;
+}
+
 .menuExperimentPage {
   width: 15%;
   height: 100%;

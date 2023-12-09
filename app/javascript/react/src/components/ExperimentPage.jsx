@@ -30,20 +30,31 @@ export default function ExperimentPage() {
   }, []);
 
   return (
-    <div className="containerExperimentPage">
-      <HeaderExperimentPage name={infoExp.name} />
-      <div className="list-cards">
-        {trials.map((item) => {
-          return (
-            <Card
-              name={item.name}
-              disabled={item.disabled}
-              deleted={item.deleted}
-              runs={item.runs}
-              trialId={item.id}
-            />
-          );
-        })}
+    <div className="container">
+      <div className="menuExperimentPage">
+        {infoExp.name}
+        <img
+          src="/card-icons/play-unactivated.svg"
+          alt="Executar"
+          className="play-button-xp-page"
+        />
+      </div>
+
+      <div className="containerExperimentPage">
+        <HeaderExperimentPage name={infoExp.name} />
+        <div className="list-cards">
+          {trials.map((item) => {
+            return (
+              <Card
+                name={item.name}
+                disabled={item.disabled}
+                deleted={item.deleted}
+                runs={item.runs}
+                trialId={item.id}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
