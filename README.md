@@ -75,4 +75,4 @@ O projeto pode ser executado localmente com
 
 `bin/dev`
 
-Para acessar a página de demonstração, a rota `hello/world` deve ser acessada
+Para acessar a página de demonstração, a rota `experiments/` deve ser acessada
