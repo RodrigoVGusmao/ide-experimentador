@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 import "../../../../assets/stylesheets/card.css";
+import "./ToggleCard.js";
 
 export default function Card({ name, disabled, deleted, runs, trialId }) {
   const [log, setLog] = useState({});
@@ -41,15 +42,27 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
 
         <div className="options">
           <div>
-            <img src="/card-icons/toggle-activated.svg" alt="Ativar" />
+            <img
+              src="/card-icons/toggle-right.svg"
+              alt="Ativar"
+              className="toggle-switch"
+            />
           </div>
 
           <div>
-            <img src="/card-icons/play.svg" alt="Executar" />
+            <img
+              src="/card-icons/play-unactivated.svg"
+              alt="Executar"
+              className="play-button"
+            />
           </div>
 
           <div>
-            <img src="/card-icons/more-horizontal.svg" alt="Mais" />
+            <img
+              src="/card-icons/more-horizontal.svg"
+              alt="Mais"
+              className="drop-down"
+            />
           </div>
         </div>
       </div>

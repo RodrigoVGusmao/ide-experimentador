@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "../../../../assets/stylesheets/experimentPage.css";
 import HeaderExperimentPage from "./HeaderExperimentPage";
+import "./ToggleCard.js";
 
 export default function ExperimentPage() {
   const [infoExp, setInfoExp] = useState({});
