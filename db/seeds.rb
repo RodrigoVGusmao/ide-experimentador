@@ -36,7 +36,7 @@ TrialExecution.destroy_all
 
 TrialExecution.create!({
     "status": "success",
-    "log": "log text",
+    "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
     "trial": trial1
 })
 p "Created #{TrialExecution.count} trialExecution"

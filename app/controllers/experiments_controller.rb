@@ -4,12 +4,17 @@ class ExperimentsController < ApplicationController
     end
     
     def index 
-      @experiments = Experiment.all()
+      
+    end
+
+    def showAll
+      # @experiments = Experiment.all()
+      render json: Experiment.all()
     end
 
     def listAllTrials
-      @trials =  Trial.all()
-      # render json: Trial.all()
+      # @trials =  Trial.all()
+      render json: Trial.all()
     end
   
   end
