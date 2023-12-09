@@ -12,8 +12,6 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
       const parse = await res.json();
       const logJSON = JSON.parse(parse.log);
 
-      console.log("card", parse);
-      console.log("log", logJSON);
       const x = logJSON.x;
       const y = logJSON.y;
       const z = logJSON.z;
@@ -26,9 +24,7 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
     <div className="card">
       {/* <Modal /> */}
       <div className="card-header">
-        <div className="test-title">
-          <text>{name}</text>
-        </div>
+        <div className="test-title">{name}</div>
 
         <div className="tags">
           <div className="tag">
@@ -70,19 +66,19 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
       <div className="card-content">
         <div className="skills">
           <img src="/card-icons/map-pin.svg" />
-          <text className="skill-text">X:{log.x}</text>
-          <text className="skill-text">Y:{log.y}</text>
-          <text className="skill-text">Z:{log.z}</text>
+          <p className="skill-text">
+            X:{log.x} Y:{log.y} Z:{log.z}
+          </p>
         </div>
 
         <div className="skills">
           <img src="/card-icons/battery-charging.svg" />
-          <text className="skill-text">{log.battery}</text>
+          <p className="skill-text">{log.battery}</p>
         </div>
       </div>
 
       <div className="card-bottom">
-        <text className="runs">Runs: {runs}</text>
+        <p className="runs">Runs: {runs}</p>
         <div>
           <img src="/card-icons/ellipse-green.svg" />
         </div>
