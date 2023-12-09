@@ -22,7 +22,6 @@ export default function ExperimentPage() {
         const path = "/api/experiments/" + id + "/trial";
         fetch(path).then(async (trials) => {
           const parse = await trials.json();
-          console.log("parse", parse);
 
           setTrials(parse);
         });
@@ -51,6 +50,7 @@ export default function ExperimentPage() {
                 deleted={item.deleted}
                 runs={item.runs}
                 trialId={item.id}
+                key={item.name}
               />
             );
           })}
