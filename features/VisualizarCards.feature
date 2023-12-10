@@ -19,7 +19,6 @@ Contexto:
 # Cenários Gerais (relacionados a lista de testes)
 Cenário: Não há testes no experimento
   Dado que estou no experimento "Experimento 2"
-  Quando eu abrir a página do experimento
   Então eu deveria ver a mensagem "Nenhum teste foi cadastrado no sistema"
 
 # Cenário feliz
