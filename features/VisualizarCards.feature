@@ -68,7 +68,7 @@ Cenário: Teste executado
   Dado que o teste "Teste 5" está selecionado no experimento "Experimento 3"
   E que pressionei o botão executar
   Então eu deveria ver o ícone "carregando" no teste selecionado "Teste 5"
-  Quando o teste terminar
+  Quando o teste selecionado "Teste 5" terminar de executar
   Então eu deveria ver o nome do teste "Teste 5"
   E as tags "tag1" e "tag2"
   E o campo coordenadas deve ser "x: 0  y: 1  z: 1"
