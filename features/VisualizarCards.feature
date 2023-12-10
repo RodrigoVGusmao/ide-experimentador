@@ -55,10 +55,10 @@ Cenário: Alguns testes executados
 Cenário: Teste nunca executado
   Dado que estou no experimento "Experimento 3"
   Então eu deveria ver o nome do teste "Teste 5"
-  E as tags "tag1", "tag2"
+  E as tags devem ser "tag1", "tag2"
   E o campo coordenadas deve ser "x:-  y:-  z:-"
   E o campo bateria deve ser "-"
-  E o ícone do resultado deve ser "N/A"
+  E o campo resultado deve ser "N/A"
   E o campo runs deve ser "0"
 
 # Cenário feliz
@@ -71,7 +71,7 @@ Cenário: Teste executado
   E as tags "tag1", "tag2"
   E o campo coordenadas deve ser "x: 0  y: 1  z: 1"
   E o campo bateria deve ser "60%"
-  E o ícone do resultado do teste deve ser "sucesso"
+  E o campo resultado deve ser "sucesso"
   E o campo runs deve ser "1"
 
 Cenário: Teste executado sem entrada no banco de dados
