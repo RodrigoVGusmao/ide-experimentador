@@ -109,5 +109,4 @@ Cenário: Visualizar modal
 Cenário: Fechar modal
   Dado que estou visualizando o modal de "mais detalhes" do "Teste 2" no "Experimento 2"
   E o botão "fechar" é pressionado
-  Então o modal é fechado
-  E eu estou no experimento "Experimento 2"
+  Então eu estou no experimento "Experimento 2"
