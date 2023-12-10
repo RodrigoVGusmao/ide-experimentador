@@ -55,7 +55,7 @@ Cenário: Alguns testes executados
 Cenário: Teste nunca executado
   Dado que estou no experimento "Experimento 3"
   Então eu deveria ver o nome do teste "Teste 5"
-  E as tags "tag1" e "tag2"
+  E as tags "tag1", "tag2"
   E o campo coordenadas deve ser "x:-  y:-  z:-"
   E o campo bateria deve ser "-"
   E o ícone do resultado deve ser "N/A"
@@ -68,7 +68,7 @@ Cenário: Teste executado
   Então eu deveria ver o ícone "carregando" no teste selecionado "Teste 5"
   Quando o teste selecionado "Teste 5" terminar de executar
   Então eu deveria ver o nome do teste "Teste 5"
-  E as tags "tag1" e "tag2"
+  E as tags "tag1", "tag2"
   E o campo coordenadas deve ser "x: 0  y: 1  z: 1"
   E o campo bateria deve ser "60%"
   E o ícone do resultado do teste deve ser "sucesso"
