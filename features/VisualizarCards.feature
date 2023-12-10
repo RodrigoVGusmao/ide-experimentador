@@ -91,10 +91,10 @@ Cenário: Visualizar mais detalhes do teste
 Cenário: Visualizar modal
   Dado que estou visualizando o modal de "mais detalhes" do "Teste 2" no "Experimento 2"
   E o botão "bateria" é pressionado
-  Então um destaque o ícone de "bateria" deveria aparecer
+  Então um destaque no ícone de "bateria" deveria aparecer
   E a página vazia com futuros detalhes da "bateria" deveria aparecer
   Quando eu pressiono o botão "coordenadas"
-  Então um destaque o ícone de "coordenadas" deveria aparecer
+  Então um destaque no ícone de "coordenadas" deveria aparecer
   E a página vazia com futuros detalhes de "coordenadas" deveria aparecer
   Quando eu pressiono o botão "velocidade"
   Então um destaque no ícone de "velocidade" deveria aparecer
