@@ -56,10 +56,10 @@ Cenário: Teste nunca executado
   Dado que estou no experimento "Experimento 3"
   Então eu deveria ver o nome do teste "Teste 5"
   E as tags devem ser "tag1", "tag2"
-  E o campo coordenadas deve ser "x:-  y:-  z:-"
-  E o campo bateria deve ser "-"
-  E o campo resultado deve ser "N/A"
-  E o campo runs deve ser "0"
+  E o campo "coordenadas" deve ser "x:-  y:-  z:-"
+  E o campo "bateria" deve ser "-"
+  E o campo "resultado" deve ser "N/A"
+  E o campo "runs" deve ser "0"
 
 # Cenário feliz
 Cenário: Teste executado
@@ -69,10 +69,10 @@ Cenário: Teste executado
   Quando o teste selecionado "Teste 5" terminar de executar
   Então eu deveria ver o nome do teste "Teste 5"
   E as tags "tag1", "tag2"
-  E o campo coordenadas deve ser "x: 0  y: 1  z: 1"
-  E o campo bateria deve ser "60%"
-  E o campo resultado deve ser "sucesso"
-  E o campo runs deve ser "1"
+  E o campo "coordenadas" deve ser "x: 0  y: 1  z: 1"
+  E o campo "bateria" deve ser "60%"
+  E o campo "resultado" deve ser "sucesso"
+  E o campo "runs" deve ser "1"
 
 Cenário: Teste executado sem entrada no banco de dados
   Dado que o teste "Teste 6" do "Experimento 3" foi executado
