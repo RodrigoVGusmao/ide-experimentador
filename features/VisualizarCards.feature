@@ -5,7 +5,6 @@ Funcionalidade: Visualizar testes dos experimentos como cards
 
 Contexto:
   Dado que estou logado como usuário no ide-experimentador
-  E eu estou na página do experimento
   E que não existem testes no experimento "Experimento 2"
   E que existem os testes "Teste 1", "Teste 2", "Teste 3", "Teste 4" no experimento "Experimento 1"
   E que existe os testes "Teste 5", "Teste 6" no experimento "Experimento 3"
