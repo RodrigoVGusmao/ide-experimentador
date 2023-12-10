@@ -1,4 +1,4 @@
-#language: pt
+o#language: pt
 Funcionalidade: Visualizar testes dos experimentos como cards
   Eu como um usuário
   Eu quero visualizar os testes como cards
@@ -86,22 +86,22 @@ Cenário: Visualizar mais detalhes do teste
   Dado que estou no teste "Teste 2" do experimento "Experimento 2"
   E o botão "mais opções" é pressionado
   Então uma lista de opções com "mais detalhes" deve aparecer
-  Quando eu clicar em "mais detalhes"
+  Quando eu pressiono o botão "mais detalhes"
   Então eu deveria ver um modal com 4 páginas e uma opção de fechar o modal
 
 # Cenário feliz
 Cenário: Visualizar modal
   Dado que estou visualizando o modal de "mais detalhes" do "Teste 2" no "Experimento 2"
   E o botão "bateria" é pressionado
-  Então um destaque no ícone de "bateria" deveria aparecer
+  Então um destaque o ícone de "bateria" deveria aparecer
   E a página vazia com futuros detalhes da "bateria" deveria aparecer
-  Quando eu pressiono no botão de "coordenadas"
-  Então um destaque no ícone de "coordenadas" deveria aparecer
+  Quando eu pressiono o botão "coordenadas"
+  Então um destaque o ícone de "coordenadas" deveria aparecer
   E a página vazia com futuros detalhes de "coordenadas" deveria aparecer
-  Quando eu pressiono no botão de "velocidade"
+  Quando eu pressiono o botão "velocidade"
   Então um destaque no ícone de "velocidade" deveria aparecer
   E a página vazia com futuros detalhes de "velocidade" deveria aparecer
-  Quando eu pressiono no botão de "Runs"
+  Quando eu pressiono o botão "Runs"
   Então um destaque no ícone de "Runs" deveria aparecer
   E a página vazia com futuros detalhes de "Runs" deveria aparecer
 
