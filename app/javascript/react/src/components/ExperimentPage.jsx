@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "../../../../assets/stylesheets/experimentPage.css";
 import HeaderExperimentPage from "./HeaderExperimentPage";
+import ExperimentItemMenu from "./ExperimentItemMenu";
 import "./ToggleCard.js";
 
 export default function ExperimentPage() {
@@ -28,6 +29,9 @@ export default function ExperimentPage() {
     setExperimentName(name);
   }
 
+  console.log("experiments", experimentsInfos);
+  console.log("trials", trials);
+
   return (
     <div className="container">
       <div className="containerMenuExperiments">
@@ -36,6 +40,7 @@ export default function ExperimentPage() {
             <ExperimentItemMenu
               experiment={experiment}
               handleOnClick={handleOnClick}
+              key={Math.random()}
             />
           );
         })}
@@ -52,7 +57,7 @@ export default function ExperimentPage() {
                 deleted={trial.deleted}
                 runs={trial.runs}
                 trialId={trial.id}
-                key={trial.name}
+                key={Math.random()}
               />
             );
           })}

@@ -31,50 +31,60 @@ p "Created #{Experiment.count} experiments"
 Trial.destroy_all
 
 trial1 = Trial.create!(
-    [{   
-        "name": "nome",
-        "disabled": false,
-        "deleted": false,
-        "runs": 0,
-        "experiment": xp1[0]
-    },
     {   
-        "name": "nome",
+        "name": "Teste 1",
         "disabled": false,
         "deleted": false,
         "runs": 0,
         "experiment": xp1[0]
-    },{   
-        "name": "nome",
-        "disabled": false,
-        "deleted": false,
-        "runs": 0,
-        "experiment": xp1[0]
-    },{   
-        "name": "nome",
-        "disabled": false,
-        "deleted": false,
-        "runs": 0,
-        "experiment": xp1[0]
-    },{   
-        "name": "nome",
-        "disabled": false,
-        "deleted": false,
-        "runs": 0,
-        "experiment": xp1[0]
-    },
+    }
+)
 
-]
+trial2 = Trial.create!(
+    {   
+        "name": "Teste 2",
+        "disabled": false,
+        "deleted": false,
+        "runs": 0,
+        "experiment": xp1[0]
+    }
+)
+
+trial3 = Trial.create!(
+    {   
+        "name": "Teste 3",
+        "disabled": false,
+        "deleted": false,
+        "runs": 0,
+        "experiment": xp1[0]
+    }
 )
 p "Created #{Trial.count} trials"
+
 
 TrialExecution.destroy_all
 
 # toRun (verde), incompleted(amarela), running(outroicone)
 
-TrialExecution.create!({
+TrialExecution.create!(
+{
     "status": "toRun",
     "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
-    "trial": trial1[0]
+    "trial": trial1
+})
+
+TrialExecution.create!(
+{
+    "status": "toRun",
+    "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
+    "trial": trial2
+})
+
+
+TrialExecution.create!(
+{
+    "status": "toRun",
+    "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
+    "trial": trial3
 })
 p "Created #{TrialExecution.count} trialExecution"
