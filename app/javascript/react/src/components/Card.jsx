@@ -31,7 +31,11 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
   }, []);
 
   function nextStateActivated(nextState) {
-    setActivated(nextState);
+    if (!disabled) {
+      setActivated(nextState);
+    }
+
+    setActivated(false);
   }
 
   function nextRunningState(nextState) {
