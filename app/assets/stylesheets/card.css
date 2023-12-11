@@ -133,8 +133,12 @@
   bottom: 4px;
 }
 
+.running-button {
+  margin-right: 7px;
+}
+
 /* Botão de ativar todos os testes de cards que estão ativos (não achei esse botão) */
-.batch-play-button {
+/* .batch-play-button {
   cursor: pointer;
 
   bottom: 4px;
@@ -148,7 +152,7 @@
 .batch-play-activated {
   left: 2px;
   bottom: 4px;
-}
+} */
 
 .card-content {
   width: 50%;
