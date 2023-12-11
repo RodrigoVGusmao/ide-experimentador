@@ -3,7 +3,6 @@ import Card from "./Card";
 import "../../../../assets/stylesheets/experimentPage.css";
 import HeaderExperimentPage from "./HeaderExperimentPage";
 import ExperimentItemMenu from "./ExperimentItemMenu";
-import "./ToggleCard.js";
 import Modal from "./Modal";
 import { useModal } from "../dropdownContext.jsx";
 

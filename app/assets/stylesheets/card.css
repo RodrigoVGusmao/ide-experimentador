@@ -164,7 +164,7 @@
   align-items: flex-start;
 }
 
-.skills {
+.features {
   text-justify: center;
   display: flex;
   justify-content: center;
@@ -173,7 +173,7 @@
   margin-bottom: 0px;
 }
 
-.skill-text {
+.features-text {
   font-size: 14px;
   padding: 5px;
   margin: 0;

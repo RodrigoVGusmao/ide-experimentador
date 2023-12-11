@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import "../../../../assets/stylesheets/card.css";
 
-export default function ToggleButton() {
-  const [desactivated, setDesactivated] = useState(false);
-
+export default function ToggleButton({ activated, getDesactivated }) {
   function handleToggleButton() {
-    setDesactivated(!desactivated);
+    getDesactivated(!activated);
   }
 
   return (
     <div onClick={handleToggleButton}>
-      {desactivated ? (
+      {activated ? (
         <img
           src="/card-icons/toggle-activated.svg"
           alt="Ativar"
