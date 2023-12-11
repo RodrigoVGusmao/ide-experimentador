@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "../../../../assets/stylesheets/experimentPage.css";
 import HeaderExperimentPage from "./HeaderExperimentPage";
+import ExperimentItemMenu from "./ExperimentItemMenu";
 import "./ToggleCard.js";
 
 export default function ExperimentPage() {
@@ -28,24 +29,22 @@ export default function ExperimentPage() {
     setExperimentName(name);
   }
 
+  console.log("experiments", experimentsInfos);
+  console.log("trials", trials);
+
   return (
     <div className="container">
-      {experimentsInfos.map((experiment) => {
-        return (
-          <div
-            className="menuExperimentPage"
-            key={experiment.name}
-            onClick={() => handleOnClick(experiment.id, experiment.name)}
-          >
-            {experiment.name}
-            <img
-              src="/card-icons/play-unactivated.svg"
-              alt="Executar"
-              className="play-button-xp-page"
+      <div className="containerMenuExperiments">
+        {experimentsInfos.map((experiment) => {
+          return (
+            <ExperimentItemMenu
+              experiment={experiment}
+              handleOnClick={handleOnClick}
+              key={Math.random()}
             />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
       <div className="containerExperimentPage">
         <HeaderExperimentPage name={experimentName} />
@@ -58,7 +57,7 @@ export default function ExperimentPage() {
                 deleted={trial.deleted}
                 runs={trial.runs}
                 trialId={trial.id}
-                key={trial.name}
+                key={Math.random()}
               />
             );
           })}

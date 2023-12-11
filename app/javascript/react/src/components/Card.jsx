@@ -10,18 +10,20 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
     const path = "/api/trial/" + trialId;
     fetch(path).then(async (res) => {
       const parse = await res.json();
-      const logJSON = JSON.parse(parse.log);
+      if (parse != undefined) {
+        const logJSON = await JSON.parse(parse[0].log);
 
-      const x = logJSON.x;
-      const y = logJSON.y;
-      const z = logJSON.z;
-      const battery = logJSON.battery;
-      setLog({ x, y, z, battery });
+        const x = logJSON.x;
+        const y = logJSON.y;
+        const z = logJSON.z;
+        const battery = logJSON.battery;
+        setLog({ x, y, z, battery });
+      }
     });
   }, []);
 
   return (
-    <div className="card">
+    <div className={disabled ? "card-disactivated" : "card"}>
       {/* <Modal /> */}
       <div className="card-header">
         <div className="test-title">{name}</div>
