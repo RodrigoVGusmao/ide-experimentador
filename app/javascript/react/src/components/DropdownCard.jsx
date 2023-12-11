@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "../../../../assets/stylesheets/card.css";
 import { useModal } from "../dropdownContext";
 
-export default function DropdownCard() {
+export default function DropdownCard({ disabled }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { open, setOpen } = useModal();
 
   function handleDropwdonOpen() {
-    setDropdownOpen(!dropdownOpen);
+    if (!disabled) {
+      setDropdownOpen(!dropdownOpen);
+    } else {
+      setDropdownOpen(false);
+    }
   }
 
   function handleModalOpen() {

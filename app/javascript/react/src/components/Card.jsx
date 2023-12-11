@@ -66,7 +66,7 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
             activated={activated}
             getRunning={nextRunningState}
           />
-          <DropdownCard />
+          <DropdownCard disabled={disabled} />
         </div>
       </div>
 
