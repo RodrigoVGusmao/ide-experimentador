@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+
 import "../../../../assets/stylesheets/card.css";
-import "./ToggleCard.js";
+
 import DropdownCard from "./DropdownCard.jsx";
+import PlayButton from "./PlayButton.jsx";
+import ToggleButton from "./ToggleButton.jsx";
 
 export default function Card({ name, disabled, deleted, runs, trialId }) {
   const [log, setLog] = useState({});
@@ -33,29 +36,14 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
           <div className="tag">
             <img src="/card-icons/tag1.svg" alt="Tag 1" />
           </div>
-
           <div className="tag">
             <img src="/card-icons/tag2.svg" alt="Tag2" />
           </div>
         </div>
 
         <div className="options">
-          <div>
-            <img
-              src="/card-icons/toggle-right.svg"
-              alt="Ativar"
-              className="toggle-switch"
-            />
-          </div>
-
-          <div>
-            <img
-              src="/card-icons/play-unactivated.svg"
-              alt="Executar"
-              className="play-button"
-            />
-          </div>
-
+          <ToggleButton />
+          <PlayButton disabled={disabled} />
           <DropdownCard />
         </div>
       </div>

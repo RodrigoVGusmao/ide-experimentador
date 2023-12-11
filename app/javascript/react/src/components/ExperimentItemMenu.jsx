@@ -1,24 +1,17 @@
 import React from "react";
 import "../../../../assets/stylesheets/experimentPage.css";
+import PlayButton from "./PlayButton.jsx";
 
 export default function ExperimentItemMenu({ experiment, handleOnClick }) {
   return (
-    <div
-      className="menuExperimentPage"
-      key={experiment.name}
-      onClick={() => handleOnClick(experiment.id, experiment.name)}
-    >
-      {experiment.name}
-
-      <img
-        src={
-          experiment.disabled
-            ? "/card-icons/play-unactivated.svg"
-            : "/card-icons/play.svg"
-        }
-        alt="Executar"
-        className="play-button-xp-page"
-      />
+    <div className="menuExperimentPage">
+      <div
+        key={experiment.name}
+        onClick={() => handleOnClick(experiment.id, experiment.name)}
+      >
+        {experiment.name}
+      </div>
+      <PlayButton disabled={experiment.disabled} />
     </div>
   );
 }
