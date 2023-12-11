@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "../../../../assets/stylesheets/card.css";
-import { useExperiments } from "../experimentsContext";
 
 export default function ToggleButton({ activated, getDesactivated }) {
-  // const [desactivated, setDesactivated] = useState(false);
-
   function handleToggleButton() {
     getDesactivated(!activated);
   }
