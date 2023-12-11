@@ -11,10 +11,19 @@
 Experiment.destroy_all
 
 xp1 = Experiment.create!(
-    {
+    [{
         "name": "exp01",
         "disabled": false
-    }
+    },{
+        "name": "exp02",
+        "disabled": true
+    },
+    {
+        "name": "exp03",
+        "disabled": false
+    },
+
+]
 )
 
 p "Created #{Experiment.count} experiments"
@@ -24,10 +33,10 @@ Trial.destroy_all
 trial1 = Trial.create!(
     {   
         "name": "nome",
-        "disabled": false,
+        "disabled": true,
         "deleted": false,
         "runs": 0,
-        "experiment": xp1
+        "experiment": xp1[0]
     }
 )
 p "Created #{Trial.count} trials"
