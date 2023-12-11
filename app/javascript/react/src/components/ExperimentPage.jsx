@@ -32,9 +32,6 @@ export default function ExperimentPage() {
     setExperimentName(name);
   }
 
-  console.log("experiments", experimentsInfos);
-  console.log("trials", trials);
-
   function handleModalClose() {
     setOpen(false);
   }
