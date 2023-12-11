@@ -11,6 +11,16 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.containerMenuExperiments {
+  width: 15%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .menuExperimentPage {
   width: 15%;
   height: 100%;
@@ -48,7 +58,7 @@
 
   width: 100%;
   height: 100%;
-  background-color: #d9d9d9;
+  background-color: #f3f3f3;
 }
 
 .headerExperimentPage {
