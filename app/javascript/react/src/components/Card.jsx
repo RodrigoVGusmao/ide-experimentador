@@ -67,16 +67,16 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
       </div>
 
       <div className="card-content">
-        <div className="skills">
+        <div className="features">
           <img src="/card-icons/map-pin.svg" />
-          <p className="skill-text">
+          <p className="features-text">
             X:{log.x} Y:{log.y} Z:{log.z}
           </p>
         </div>
 
-        <div className="skills">
+        <div className="features">
           <img src="/card-icons/battery-charging.svg" />
-          <p className="skill-text">{log.battery}</p>
+          <p className="features-text">{log.battery}</p>
         </div>
       </div>
 
