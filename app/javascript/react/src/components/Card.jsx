@@ -5,10 +5,13 @@ import "../../../../assets/stylesheets/card.css";
 import DropdownCard from "./DropdownCard.jsx";
 import PlayButton from "./PlayButton.jsx";
 import ToggleButton from "./ToggleButton.jsx";
+import Status from "./Status.jsx";
 
 export default function Card({ name, disabled, deleted, runs, trialId }) {
   const [log, setLog] = useState({});
   const [status, setStatus] = useState();
+  const [activated, setActivated] = useState(false);
+  const [running, setRunning] = useState(false);
 
   useEffect(() => {
     const path = "/api/trial/" + trialId;
@@ -27,6 +30,14 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
     });
   }, []);
 
+  function nextStateActivated(nextState) {
+    setActivated(nextState);
+  }
+
+  function nextRunningState(nextState) {
+    setRunning(nextState);
+  }
+
   return (
     <div className={disabled ? "card-disactivated" : "card"}>
       <div className="card-header">
@@ -42,8 +53,15 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
         </div>
 
         <div className="options">
-          <ToggleButton />
-          <PlayButton disabled={disabled} />
+          <ToggleButton
+            activated={activated}
+            getDesactivated={nextStateActivated}
+          />
+          <PlayButton
+            disabled={disabled}
+            activated={activated}
+            getRunning={nextRunningState}
+          />
           <DropdownCard />
         </div>
       </div>
@@ -64,13 +82,7 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
 
       <div className="card-bottom">
         <p className="runs">Runs: {runs}</p>
-        <div>
-          {status == "toRun" && <img src="/card-icons/ellipse-green.svg" />}
-          {status == "running" && <img src="/card-icons/loader.svg" />}
-          {status == "incompleted" && (
-            <img src="/card-icons/ellipse-orange.svg" />
-          )}
-        </div>
+        <Status status={status} running={running} activated={activated} />
       </div>
     </div>
   );

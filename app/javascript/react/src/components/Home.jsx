@@ -1,12 +1,15 @@
 import React from "react";
 import ExperimentPage from "./ExperimentPage";
 import { DropdownCardProvider } from "../dropdownContext";
+import { ExperimentsProvider } from "../experimentsContext";
 
 function Home() {
   return (
-    <DropdownCardProvider>
-      <ExperimentPage />
-    </DropdownCardProvider>
+    <ExperimentsProvider>
+      <DropdownCardProvider>
+        <ExperimentPage />
+      </DropdownCardProvider>
+    </ExperimentsProvider>
   );
 }
 

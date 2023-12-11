@@ -11,7 +11,11 @@ export default function ExperimentItemMenu({ experiment, handleOnClick }) {
       >
         {experiment.name}
       </div>
-      <PlayButton disabled={experiment.disabled} />
+      <PlayButton
+        disabled={experiment.disabled}
+        type="exp-button"
+        getRunning={() => {}}
+      />
     </div>
   );
 }
