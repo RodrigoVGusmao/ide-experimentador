@@ -8,7 +8,7 @@ export default function Status({ status, running, activated }) {
     if ((runningTrial && activated) || running || status == "running") {
       return "/card-icons/loader.svg";
     } else if (!(runningTrial && activated) || !running) {
-      if (status == "toRun") {
+      if (status == "success") {
         return "/card-icons/ellipse-green.svg";
       } else {
         return "/card-icons/ellipse-orange.svg";
