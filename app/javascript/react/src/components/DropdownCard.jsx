@@ -1,44 +1,35 @@
 import React, { useState } from "react";
 import "../../../../assets/stylesheets/card.css";
-
-import Modal from "./Modal";
+import { useModal } from "../dropdownContext";
 
 export default function DropdownCard() {
-  const [open, setOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { open, setOpen } = useModal();
 
-  function handleOpen() {
-    setOpen(!open);
+  function handleDropwdonOpen() {
+    setDropdownOpen(!dropdownOpen);
   }
 
   function handleModalOpen() {
-    console.log("Open modal");
-    setModalOpen(!modalOpen);
-  }
-
-  function handleModalClose() {
-    setModalOpen(false);
+    setOpen(!open);
   }
 
   return (
     <div>
-      <button onClick={handleOpen} className="dropdown-card">
+      <button onClick={handleDropwdonOpen} className="dropdown-card">
         <img
           src="/card-icons/more-horizontal.svg"
           alt="Mais"
           className="drop-down"
         />
-        {open ? (
+        {dropdownOpen ? (
           <ul className="dropdown-menu">
-            <l1 className="dropdown-item">
+            <li className="dropdown-item">
               <div onClick={handleModalOpen}>Mais opções</div>
-            </l1>
+            </li>
           </ul>
         ) : null}
       </button>
-      {modalOpen && (
-        <Modal isModalOpen={modalOpen} closeModal={handleModalClose} />
-      )}
     </div>
   );
 }
