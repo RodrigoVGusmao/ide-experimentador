@@ -5,6 +5,7 @@ import HeaderExperimentPage from "./HeaderExperimentPage";
 import ExperimentItemMenu from "./ExperimentItemMenu";
 import Modal from "./Modal";
 import { useModal } from "../dropdownContext.jsx";
+import EmptyListTrials from "./EmptyListTrials.jsx";
 
 export default function ExperimentPage() {
   const [experimentsInfos, setExperimentsInfos] = useState([]);
@@ -54,20 +55,24 @@ export default function ExperimentPage() {
       <div className="containerExperimentPage">
         <HeaderExperimentPage name={experimentName} />
         {open && <Modal isModalOpen={open} closeModal={handleModalClose} />}
-        <div className="list-cards">
-          {trials.map((trial) => {
-            return (
-              <Card
-                name={trial.name}
-                disabled={trial.disabled}
-                deleted={trial.deleted}
-                runs={trial.runs}
-                trialId={trial.id}
-                key={Math.random()}
-              />
-            );
-          })}
-        </div>
+        {trials.length != 0 && (
+          <div className="list-cards">
+            {trials.map((trial) => {
+              return (
+                <Card
+                  name={trial.name}
+                  disabled={trial.disabled}
+                  deleted={trial.deleted}
+                  runs={trial.runs}
+                  trialId={trial.id}
+                  key={Math.random()}
+                />
+              );
+            })}
+          </div>
+        )}
+
+        {trials.length == 0 && <EmptyListTrials />}
       </div>
     </div>
   );

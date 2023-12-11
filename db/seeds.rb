@@ -22,6 +22,10 @@ xp1 = Experiment.create!(
         "name": "exp03",
         "disabled": false
     },
+    {
+        "name": "exp04",
+        "disabled": false
+    },
 
 ]
 )
