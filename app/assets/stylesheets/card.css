@@ -81,6 +81,45 @@
 }
 
 .dropdown-card {
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+
+  list-style-type: none;
+  margin-top: 2px;
+
+  padding: 5px;
+
+  border: 1px solid #d9d9d9;
+  width: 100px;
+}
+
+.dropdown-menu > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.dropdown-menu > li:hover {
+  background-color: white;
+}
+
+.dropdown-menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  background: #ffffff;
+  color: inherit;
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
   cursor: pointer;
 }
 
@@ -90,25 +129,23 @@
 
 .play-button {
   cursor: pointer;
-  position: relative;
+
   bottom: 4px;
 }
 
 /* Botão de ativar todos os testes de cards que estão ativos (não achei esse botão) */
 .batch-play-button {
   cursor: pointer;
-  position: relative;
+
   bottom: 4px;
 }
 
 .play-activated {
-  position: relative;
   left: 2px;
   bottom: 8px;
 }
 
 .batch-play-activated {
-  position: relative;
   left: 2px;
   bottom: 4px;
 }

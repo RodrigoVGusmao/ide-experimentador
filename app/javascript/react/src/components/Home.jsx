@@ -1,11 +1,12 @@
 import React from "react";
 import ExperimentPage from "./ExperimentPage";
+import { DropdownCardProvider } from "../dropdownContext";
 
 function Home() {
   return (
-    <div>
+    <DropdownCardProvider>
       <ExperimentPage />
-    </div>
+    </DropdownCardProvider>
   );
 }
 

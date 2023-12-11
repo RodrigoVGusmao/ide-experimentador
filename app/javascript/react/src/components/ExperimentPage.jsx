@@ -4,10 +4,13 @@ import "../../../../assets/stylesheets/experimentPage.css";
 import HeaderExperimentPage from "./HeaderExperimentPage";
 import ExperimentItemMenu from "./ExperimentItemMenu";
 import "./ToggleCard.js";
+import Modal from "./Modal";
+import { useModal } from "../dropdownContext.jsx";
 
 export default function ExperimentPage() {
   const [experimentsInfos, setExperimentsInfos] = useState([]);
   const [trials, setTrials] = useState([]);
+  const { open: open, setOpen: setOpen } = useModal();
 
   const [experimentName, setExperimentName] = useState();
 
@@ -29,8 +32,9 @@ export default function ExperimentPage() {
     setExperimentName(name);
   }
 
-  console.log("experiments", experimentsInfos);
-  console.log("trials", trials);
+  function handleModalClose() {
+    setOpen(false);
+  }
 
   return (
     <div className="container">
@@ -48,6 +52,7 @@ export default function ExperimentPage() {
 
       <div className="containerExperimentPage">
         <HeaderExperimentPage name={experimentName} />
+        {open && <Modal isModalOpen={open} closeModal={handleModalClose} />}
         <div className="list-cards">
           {trials.map((trial) => {
             return (
