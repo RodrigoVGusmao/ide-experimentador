@@ -96,7 +96,7 @@ TrialExecution.create!(
 
 TrialExecution.create!(
 {
-    "status": "toRun",
+    "status": "running",
     "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
     "trial": trial2
 })
@@ -104,7 +104,7 @@ TrialExecution.create!(
 
 TrialExecution.create!(
 {
-    "status": "toRun",
+    "status": "incompleted",
     "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
     "trial": trial3
 })

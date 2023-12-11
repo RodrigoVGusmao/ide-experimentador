@@ -5,12 +5,14 @@ import "./ToggleCard.js";
 
 export default function Card({ name, disabled, deleted, runs, trialId }) {
   const [log, setLog] = useState({});
+  const [status, setStatus] = useState();
 
   useEffect(() => {
     const path = "/api/trial/" + trialId;
     fetch(path).then(async (res) => {
       const parse = await res.json();
       if (parse != undefined) {
+        setStatus(parse[0].status);
         const logJSON = await JSON.parse(parse[0].log);
 
         const x = logJSON.x;
@@ -55,7 +57,7 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
             />
           </div>
 
-          <div>
+          <div className="dropdown-card">
             <img
               src="/card-icons/more-horizontal.svg"
               alt="Mais"
@@ -82,7 +84,11 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
       <div className="card-bottom">
         <p className="runs">Runs: {runs}</p>
         <div>
-          <img src="/card-icons/ellipse-green.svg" />
+          {status == "toRun" && <img src="/card-icons/ellipse-green.svg" />}
+          {status == "running" && <img src="/card-icons/loader.svg" />}
+          {status == "incompleted" && (
+            <img src="/card-icons/ellipse-orange.svg" />
+          )}
         </div>
       </div>
     </div>
