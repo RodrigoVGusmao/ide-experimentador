@@ -8,13 +8,12 @@ class ExperimentsController < ApplicationController
     end
 
     def showAll
-      # @experiments = Experiment.all()
       render json: Experiment.all()
     end
 
     def listAllTrials
-      # @trials =  Trial.all()
-      render json: Trial.all()
+      experiment = Experiment.find(params[:id])
+      render json: Trial.where(experiment_id: experiment)
     end
   
   end
