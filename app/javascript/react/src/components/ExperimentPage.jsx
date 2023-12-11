@@ -30,22 +30,30 @@ export default function ExperimentPage() {
 
   return (
     <div className="container">
-      {experimentsInfos.map((experiment) => {
-        return (
-          <div
-            className="menuExperimentPage"
-            key={experiment.name}
-            onClick={() => handleOnClick(experiment.id, experiment.name)}
-          >
-            {experiment.name}
-            <img
-              src="/card-icons/play-unactivated.svg"
-              alt="Executar"
-              className="play-button-xp-page"
-            />
-          </div>
-        );
-      })}
+      <div className="containerMenuExperiments">
+        {experimentsInfos.map((experiment) => {
+          console.log("nome", experiment.name, experiment.disabled);
+          return (
+            <div
+              className="menuExperimentPage"
+              key={experiment.name}
+              onClick={() => handleOnClick(experiment.id, experiment.name)}
+            >
+              {experiment.name}
+
+              <img
+                src={
+                  experiment.disabled
+                    ? "/card-icons/play-unactivated.svg"
+                    : "/card-icons/play.svg"
+                }
+                alt="Executar"
+                className="play-button-xp-page"
+              />
+            </div>
+          );
+        })}
+      </div>
 
       <div className="containerExperimentPage">
         <HeaderExperimentPage name={experimentName} />
