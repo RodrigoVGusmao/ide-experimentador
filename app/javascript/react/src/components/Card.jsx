@@ -21,7 +21,7 @@ export default function Card({ name, disabled, deleted, runs, trialId }) {
   }, []);
 
   return (
-    <div className="card">
+    <div className={disabled ? "card-disactivated" : "card"}>
       {/* <Modal /> */}
       <div className="card-header">
         <div className="test-title">{name}</div>
