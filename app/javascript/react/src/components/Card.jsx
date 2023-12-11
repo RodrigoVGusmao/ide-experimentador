@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Modal from "./Modal";
 import "../../../../assets/stylesheets/card.css";
 import "./ToggleCard.js";
 import DropdownCard from "./DropdownCard.jsx";
