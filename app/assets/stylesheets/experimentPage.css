@@ -22,7 +22,7 @@
 }
 
 .menuExperimentPage {
-  width: 15%;
+  width: auto;
   height: 100%;
 
   display: flex;
@@ -38,6 +38,7 @@
   font-size: 22px;
   padding-top: 15px;
   padding-bottom: 15px;
+  cursor: pointer;
 }
 
 .play-button-xp-page {
