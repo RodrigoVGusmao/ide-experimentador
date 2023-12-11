@@ -36,6 +36,8 @@
   padding: 5px;
 
   font-size: 22px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .play-button-xp-page {
@@ -51,14 +53,10 @@
 }
 
 .containerExperimentPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #f3f3f3;
+  overflow-y: hidden;
 }
 
 .headerExperimentPage {
@@ -84,6 +82,16 @@
 }
 
 .list-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  height: 770px;
   margin-top: 5%;
-  margin-left: 8%;
+  margin-left: 5%;
 }
