@@ -4,7 +4,6 @@ import { useExperiments } from "../experimentsContext";
 export default function Status({ status, running, activated }) {
   const { runningTrial, setRunningTrial } = useExperiments();
 
-  console.log("rT", runningTrial, running);
   function showStatus() {
     if ((runningTrial && activated) || running || status == "running") {
       return "/card-icons/loader.svg";
@@ -14,8 +13,6 @@ export default function Status({ status, running, activated }) {
       } else {
         return "/card-icons/ellipse-orange.svg";
       }
-    } else {
-      console.log("ueopa");
     }
   }
 
