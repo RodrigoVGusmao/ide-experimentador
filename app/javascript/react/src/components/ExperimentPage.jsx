@@ -5,52 +5,60 @@ import HeaderExperimentPage from "./HeaderExperimentPage";
 import "./ToggleCard.js";
 
 export default function ExperimentPage() {
-  const [infoExp, setInfoExp] = useState({});
+  const [experimentsInfos, setExperimentsInfos] = useState([]);
   const [trials, setTrials] = useState([]);
 
+  const [experimentName, setExperimentName] = useState();
+
   useEffect(() => {
-    fetch("/api/experiments/")
-      .then(async (res) => {
-        const parse = await res.json();
+    fetch("/api/experiments/").then(async (res) => {
+      const listOfExperiments = await res.json();
 
-        const id = parse[0].id;
-        const name = parse[0].name;
-        setInfoExp({ id, name });
-        return id;
-      })
-      .then(async (id) => {
-        const path = "/api/experiments/" + id + "/trial";
-        fetch(path).then(async (trials) => {
-          const parse = await trials.json();
-
-          setTrials(parse);
-        });
-      });
+      setExperimentsInfos(listOfExperiments);
+    });
   }, []);
+
+  function handleOnClick(id, name) {
+    const path = "/api/experiments/" + id + "/trial";
+    fetch(path).then(async (trials) => {
+      const listOfTrials = await trials.json();
+      setTrials(listOfTrials);
+    });
+
+    setExperimentName(name);
+  }
 
   return (
     <div className="container">
-      <div className="menuExperimentPage">
-        {infoExp.name}
-        <img
-          src="/card-icons/play-unactivated.svg"
-          alt="Executar"
-          className="play-button-xp-page"
-        />
-      </div>
+      {experimentsInfos.map((experiment) => {
+        return (
+          <div
+            className="menuExperimentPage"
+            key={experiment.name}
+            onClick={() => handleOnClick(experiment.id, experiment.name)}
+          >
+            {experiment.name}
+            <img
+              src="/card-icons/play-unactivated.svg"
+              alt="Executar"
+              className="play-button-xp-page"
+            />
+          </div>
+        );
+      })}
 
       <div className="containerExperimentPage">
-        <HeaderExperimentPage name={infoExp.name} />
+        <HeaderExperimentPage name={experimentName} />
         <div className="list-cards">
-          {trials.map((item) => {
+          {trials.map((trial) => {
             return (
               <Card
-                name={item.name}
-                disabled={item.disabled}
-                deleted={item.deleted}
-                runs={item.runs}
-                trialId={item.id}
-                key={item.name}
+                name={trial.name}
+                disabled={trial.disabled}
+                deleted={trial.deleted}
+                runs={trial.runs}
+                trialId={trial.id}
+                key={trial.name}
               />
             );
           })}
