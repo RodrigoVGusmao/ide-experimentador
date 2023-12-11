@@ -82,7 +82,7 @@
 
 .dropdown-card {
   border: none;
-  background-color: #ffffff;
+  background-color: transparent;
   cursor: pointer;
 }
 
