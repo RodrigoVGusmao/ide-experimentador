@@ -22,10 +22,15 @@ export default function ExperimentPage() {
     });
   }, []);
 
-  function handleOnClick(id, name) {
+  function handleOnClick(id, name, disabled) {
     const path = "/api/experiments/" + id + "/trial";
     fetch(path).then(async (trials) => {
       const listOfTrials = await trials.json();
+      if (disabled) {
+        listOfTrials.map((item) => {
+          item.disabled = true;
+        });
+      }
       setTrials(listOfTrials);
     });
 
@@ -44,7 +49,11 @@ export default function ExperimentPage() {
             <ExperimentItemMenu
               experiment={experiment}
               handleOnClick={() =>
-                handleOnClick(experiment.id, experiment.name)
+                handleOnClick(
+                  experiment.id,
+                  experiment.name,
+                  experiment.disabled
+                )
               }
               key={Math.random()}
             />
