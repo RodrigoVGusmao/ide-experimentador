@@ -59,6 +59,27 @@ trial3 = Trial.create!(
         "experiment": xp1[0]
     }
 )
+
+trial4 = Trial.create!(
+    {   
+        "name": "Teste 4",
+        "disabled": false,
+        "deleted": false,
+        "runs": 0,
+        "experiment": xp1[0]
+    }
+)
+
+
+trial5 = Trial.create!(
+    {   
+        "name": "Teste 5",
+        "disabled": false,
+        "deleted": false,
+        "runs": 0,
+        "experiment": xp1[0]
+    }
+)
 p "Created #{Trial.count} trials"
 
 
@@ -86,5 +107,19 @@ TrialExecution.create!(
     "status": "toRun",
     "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
     "trial": trial3
+})
+
+TrialExecution.create!(
+{
+    "status": "toRun",
+    "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
+    "trial": trial4
+})
+
+TrialExecution.create!(
+{
+    "status": "toRun",
+    "log": '{"x":"0", "y":"0", "z":"0", "battery":"0%"}',
+    "trial": trial5
 })
 p "Created #{TrialExecution.count} trialExecution"
