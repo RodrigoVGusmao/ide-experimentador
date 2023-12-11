@@ -42,7 +42,9 @@ export default function ExperimentPage() {
           return (
             <ExperimentItemMenu
               experiment={experiment}
-              handleOnClick={handleOnClick}
+              handleOnClick={() =>
+                handleOnClick(experiment.id, experiment.name)
+              }
               key={Math.random()}
             />
           );
