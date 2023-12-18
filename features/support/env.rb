@@ -5,7 +5,7 @@
 # files.
 
 require 'cucumber/rails'
-
+require 'capybara-screenshot/cucumber'
 # frozen_string_literal: true
 
 # Capybara defaults to CSS3 selectors rather than XPath.
@@ -58,3 +58,24 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+
+Capybara.register_driver :selenium_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new
+  options.add_argument('--start-maximized')
+  driver = Selenium::WebDriver.for :chrome, options: options
+
+  Capybara::Selenium::Driver.new(
+    app, 
+    browser: :chrome, 
+    options: options
+  )
+end
+
+Capybara.configure do |config|
+  # Match what's set for URL options in test.rb so we
+  # can test mailers that contain links.
+  config.server_host = 'localhost'
+  config.server_port = '3000'
+end
+
+Capybara.javascript_driver = :selenium_chrome
