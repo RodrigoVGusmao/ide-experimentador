@@ -26,6 +26,7 @@ Before do
 
   experimento_atual = nil;
   teste_atual = nil;
+  scope = nil;
 end
 
 Given /^que estou logado como usuário no ide-experimentador$/ do
@@ -47,7 +48,13 @@ Given /^que os? testes? (.+) est(ão|á) selecionados? no experimento (.+)$/ do 
 
 end
 Given /que pressionei o botão executar/ do
-
+  if scope == nil
+    find ("PlayButton").click
+  else
+    within(scope) do
+      find ("PlayButton").click
+    end
+  end
 end
 Given /^que os? testes? (.+) do (.+) fo(i|ram) executado$/ do |testes, experimento|
   step %{que os testes #{testes} estão selecionados no experimento #{experimento}}
@@ -60,7 +67,7 @@ Given /^que estou no teste (.+) do experimento (.+)$/ do |teste, experimento|
   teste_atual = teste.find_by(name: teste)
 end
 Given /o botão (.+) é pressionado/ do |botao|
-
+  click_on()
 end
 Given /^que estou visualizando o modal de (.+) do (.+) no (.+)$/ do |botao, teste, experimento|
   step %{que estou no teste "#{teste}" do experimento "#{experimento}"}
@@ -70,14 +77,26 @@ Given /^que estou visualizando o modal de (.+) do (.+) no (.+)$/ do |botao, test
 end
 
 When /^os? testes? selecionados? (.+) terminar(em)? de executar$/ do |testes, dummy|
-
+  testes.each do |teste|
+    within ("Card", text: teste, match: :prefer_exact) do
+      page.should have_no_content('Status', running: false)
+    end
+  end
 end
 When /^eu pressiono o botão (.+)$/ do |botao|
-
+  if scope == nil
+    find ("div", text: "Mais opções").click
+  else
+    within(scope) do
+      find ("div", text: "Mais opções").click
+    end
+  end
 end
 
 Then /^eu deveria ver as? mensage(m|ns) (.+)$/ do |dummy, msg|
-
+  msg.each do |mensagem|
+    find('*', msg)
+  end
 end
 Then /^eu deveria ver o card (.+),\s*(.+),\s*bateria:\s*(.+),\s*resultado:\s*(.+),\s*runs:\s*(.+)$/ do |teste, posicao, bateria, resultado, execucoes|
   step %{eu deveria ver o nome do teste "#{teste}"}
@@ -90,25 +109,75 @@ Then /^eu deveria ver o ícone (.+) nos? testes? selecionados? (.+)$/ do |icone,
 
 end
 Then /^eu deveria ver o nome do teste (.+)$/ do |teste|
-
+  if scope == nil
+    find ("div.test-title", text: teste)
+  else
+    within(scope) do
+      find ("div.test-title", text: teste)
+    end
+  end
 end
 Then /^as? tags? devem? ser (.+)"$/ do |tags|
-
+  if scope == nil
+    find ("div.tag", text: "teste")
+  else
+    within(scope) do
+      find ("div.test-title", text: "teste")
+    end
+  end
 end
 Then /^o campo (.+) deve ser (.+)$/ do |campo, resultado|
-
+  if scope == nil
+    within("div.card-content") do
+      page ("p.features-text", text: => /(.)*#{campo}(.)*#{resultado}/)
+    end
+  else
+    within(scope) do
+      within("div.card-content") do
+        page ("p.features-text", text: => /(.)*#{campo}(.)*#{resultado}/)
+      end
+    end
+  end
+end
+Then /^o campo 'Bateria' deve ser (.+)$/ do |resultado|
+  if scope == nil
+    within("div.card-content") do
+      page ("p.features-text", text: (resultado))
+    end
+  else
+    within(scope) do
+      within("div.card-content") do
+        page ("p.features-text", text: (resultado))
+      end
+    end
+  end
+end
+Then /^o campo 'runs' deve ser (.+)$/ do |resultado|
+  if scope == nil
+    within("div.card-content") do
+      page ("p.runs", text: ("Runs: "+resultado))
+    end
+  else
+    within(scope) do
+      within("div.card-content") do
+        page ("p.runs", text: ("Runs: "+resultado))
+      end
+    end
+  end
 end
 Then /^uma lista de opções com (.+) deve aparecer$/ do |botao|
-
+  within("ul.dropdown-menu") do
+    find("div" :text botao)
+  end
 end
 Then /^eu deveria ver um modal com 4 páginas e uma opção de fechar o modal$/ do
-
+  page.has_selector("div.modal-overlay")
 end
 Then /^um destaque no ícone de (.+) deveria aparecer$/ do |icone|
 
 end
 Then /^a página vazia com futuros detalhes de (.+) deveria aparecer$/ do |aba|
-
+  page.has_selector(aba)
 end
 Then /^eu estou no experimento (.+)$/ do |experimento|
 
